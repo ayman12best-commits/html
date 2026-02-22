@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of Variable</title>
+</head>
+<body>
+    <h1>Scope of Variable</h1>
+    <button = onclick = "myfunction();">Click me</button>
+    <div id = "result"></div>
+    <div id = "result1"></div>
+    <div id = "result2"></div>
+    <script>
+        /* Global Variables */  
+        var b = 10
+    function myfunction(){
+        /* local variable */
+        var a = 9
+        document.getElementById("result").innerHTML = "The sum is " + (a + b)
+        }
+        document.getElementById("result1").innerHTML = "The b is " + (b)
+        document.getElementById("result2").innerHTML = "The a is " + (a)
+</script>
+    </body>
+</body>
+</html>
