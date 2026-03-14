@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student class</title>
+</head>
+<body>
+    <h1>Student class</h1>
+    <div id = "res1"></div>
+    <div id = "res2"></div>
+    <script>
+        class student{
+            constructor (name,year){
+                this.name = name
+                this.year = year
+            }
+            age(){
+                var dt = new Date().getFullYear()
+                document.getElementById("res1").innerHTML = "My name is " + this.name
+                document.getElementById("res2").innerHTML = "My age is " + (dt -this.year)
+            }
+        }
+        student1 = new student('Rahul','2012')
+        student1.age()
+    </script>
+</body>
+</html>
