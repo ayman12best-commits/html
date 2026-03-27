@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eval Function</title>
+    <title>Arrow function</title>
 </head>
 <body>
-    <h1>Eval Function</h1>
+    <h1>Arrow function</h1>
     <div id = "result"></div>
     <script>
-        var a = 10
-        var b = 23
-        var c = 8
-        document.getElementById("result").innerHTML = "the result is a + b * c" + eval("a + b * c")
+        const add = (a,b) => a + b;
+        document.getElementById("result").innerHTML = "The result is " + add(a,b)
     </script>
 </body>
 </html>

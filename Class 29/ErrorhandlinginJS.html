@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eval Function</title>
+    <title>Error handling in JS</title>
 </head>
 <body>
-    <h1>Eval Function</h1>
+    <h1>Error handling</h1>
     <div id = "result"></div>
     <script>
-        var a = 10
-        var b = 23
-        var c = 8
-        document.getElementById("result").innerHTML = "the result is a + b * c" + eval("a + b * c")
+    try{
+        addalert("welcome 67kid")
+    }
+    catch(err){
+        document.getElementById("result").innerHTML = "The error message is " + err.message
+    }
     </script>
 </body>
 </html>
