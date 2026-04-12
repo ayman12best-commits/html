@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Date</h1>
+    <button onclick = "showdat();">click me</button>
+    <div id = "dt"></div>
+    <script>
+        function showdat()
+        {
+
+            var dt = new Date()
+            var dte = dt.getDate()
+            var m = dt.getMonth()+1
+            var y = dt.getFullYear()
+            var day = dt.getDay()
+            document.getElementById("dt").innerHTML = dte + "/" + m + "/" + y
+        }
+    </script>
+</body>
+</html>
