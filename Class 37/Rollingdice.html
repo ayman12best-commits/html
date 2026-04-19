@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling dice</title>
+</head>
+<body>
+    <h1>Rolling Dice</h1>
+    <h3>Click on the dice to start and stop</h3>
+    <div id = "dice" onclick = "startstop()"></div>
+    <script>
+        var stopped = true
+        var dices = ['&#9856','&#9857','&#9858','&#9859','&#9860','&#9861']
+        var interval
+        var dice = document.getElemeneById("dice")
+        function change(){
+            var r = Math.floor(Math.random()*6)
+            dice.innerHTML = dices[r]
+        }
+        function startstop(){
+            if (stopped){
+                stopped = false
+                interval = setInterval(change,100)
+            }
+            else{
+                stopped = true
+                clearInterval(interval)
+            }
+        }
+        window.onload = function(){
+            startstop()
+        }
+    </script>
+</body>
+</html>
